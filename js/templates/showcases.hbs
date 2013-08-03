@@ -1,0 +1,25 @@
+<h2>Showcases</h2>
+
+{{#linkTo "new_showcase"}}New Showcase{{/linkTo}}
+
+<table>
+  <thead>
+    <th>wine_id</th>
+    <th>name</th>
+    <th>published</th>
+    <th>version</th>
+  </thead>
+  <tbody>
+    {{#each showcase in controller}}
+    <tr>
+      <td>{{showcase.wine_id}}</td>
+      <td>{{showcase.name}}</td>
+      <td>{{showcase.published}}</td>
+      <td>{{showcase.version}}</td>
+      <td>{{#linkTo "showcase" showcase}}view{{/linkTo}}</td>
+    </tr>
+    {{/each}}
+  </tbody>
+</table>
+
+
